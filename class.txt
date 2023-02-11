@@ -1,0 +1,100 @@
+1. CREATE A MOVIE CLASS
+ 
+class Movie {
+    constructor(title= '', studio = '', rating = 'PG') {
+       this.title = title;
+       this.studio = studio;
+       this.rating = rating;
+    }
+ 
+    getPG(movies = [], rating = '') {
+       return movies.filter((m) => m.rating === rating);
+    }
+}
+ 
+ 
+const casionRoyaleMovie = new Movie('Casino Royale', 'Eon Productions', 'PG13');
+const leo = new Movie('Leo', 'LCU', 'PG');
+const vikram = new Movie('Vikram', 'Vijay', 'PG');
+const avatar = new Movie('Avatar: The water way', 'EROS', 'PG13');
+const avengers = new Movie('The avengers: End Game', 'LCU', 'PG');
+const Angry bird=new Movie('The angry bird','warren','R');
+const pirates=new Movie('The world end','disney','R'); 
+const moviesArray = [casionRoyaleMovie, leo, vikram, avatar, avengers,Angry bird,pirates];
+ 
+console.log(casionRoyaleMovie.getPG(moviesArray, 'R'));
+console.log(casionRoyaleMovie.getPG(moviesArray, 'PG'));
+
+2.CREATE A CIRCLE CLASS
+
+class Circle {
+	constructor(R){
+		this.radius = R;
+		}
+	getArea(){
+		return Math.PI*Math.pow(this.radius, 2)
+	}
+	getPerimeter(){
+		return 2*Math.PI*this.radius
+	}
+}
+
+
+
+
+let q = new Circle(4.44);
+console.log(q.getArea());
+console.log(q.getPerimeter());
+
+3.WRITE A "PERSON" CLASS TO HOLD ALL THE DETAILS
+
+class person{
+
+           constructor(firstname='',lastname='',age='',qualification='BE',contacts='',address=''){
+ 
+            this.firstname=firstname;
+            this.lastname=lastname;
+            this.age=age;
+            this.qualification=qualification;
+            this.contacts=contacts;
+	     this.address=address;
+           }
+  	getBE(person=[],qualification='')   {
+         
+        return person.filter((p)=>p.qualification===qualification);
+	}
+	}  
+	const Rahul=new person('Rahul','varman','22','BE','rahulvarman@gmail.com','Thoothukudi');
+	const jancy=new person('Jancy','Rani','26','Bsc','jancyrani@gmail.com','chennai');
+	const velu=new person('velu','raj','28','BE','veluraj@gmail.com','Dindugul');
+	const Radha=new person('Radha','selvi','22','BE','radhaselvi@gmail.com','Thoothukudi');	
+	const Uma=new person('uma','devi','31','B.com','umadevi@gmail.com','Thirunelveli');
+	const Raji=new person('Raja','lakshmi','34','Bsc','rajalakshmi@gmail.com','Thiruvallur');
+	const prajith=new person('prajith','varman','22','BE','prajith@gmail.com','Madurai');
+	const Hiran=new person('Hiran','Dev','28','B.com','hiran@gmail.com','Thoothukudi');
+	const PersonArray=[Rahul,Jancy,Velu,Radha,Uma,Raji,Prajith,Hiran];
+	console.log(rahul.getBE(personArray,'BE'));
+
+ 4. write a class to calculate the uber price.
+
+class uber{
+      constructor(distance='',price='100'){
+          this.distance=d;
+          this.price=100;
+      }
+      
+  }
+  getdistance(){
+  
+    return this.distance*this.price;
+  }
+  
+      
+  
+  
+ console.log(getdistance(90));
+
+
+
+
+
